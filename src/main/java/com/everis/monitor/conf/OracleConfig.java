@@ -28,7 +28,7 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "oracleEntityManagerFactory", basePackages = {"com.everis.monitor.repositories"}, transactionManagerRef = "oracleTransactionManager")
+@EnableJpaRepositories(entityManagerFactoryRef = "oracleEntityManagerFactory", basePackages = {"com.everis.monitor.repositories.incurrido"}, transactionManagerRef = "oracleTransactionManager")
 public class OracleConfig {
 //
 ////	@Bean

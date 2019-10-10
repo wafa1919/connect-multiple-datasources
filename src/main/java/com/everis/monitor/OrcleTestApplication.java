@@ -1,9 +1,6 @@
 package com.everis.monitor;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.everis.monitor.entities.Incurrido;
 import com.everis.monitor.entities.User;
-import com.everis.monitor.repositories.IncurridoRepository;
-import com.everis.monitor.repositories.UserRepository;
+import com.everis.monitor.repositories.incurrido.IncurridoRepository;
+import com.everis.monitor.repositories.user.UserRepository;
 
 @RestController
 @SpringBootApplication
@@ -31,8 +28,9 @@ public class OrcleTestApplication {
 	@GetMapping("/allUsers")
 	public List<User> getall() {
 		System.out.println("users: "+userRep.count());
-		System.out.println("incurridos: "+incRep.count());
-		return userRep.findAll();
+		List<User> users = userRep.findAll();
+		users.forEach(user -> System.out.println("user "+user));
+		return users;
 	}
 	
 	@GetMapping("/allInc")

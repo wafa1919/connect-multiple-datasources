@@ -25,11 +25,11 @@ import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "MYSQLEntityManagerFactory", basePackages = {"com.everis.monitor.repositories"}, transactionManagerRef = "MYSQLTransactionManager")
+@EnableJpaRepositories(entityManagerFactoryRef = "MYSQLEntityManagerFactory", basePackages = {"com.everis.monitor.repositories.user"}, transactionManagerRef = "MYSQLTransactionManager")
 public class MySQLConfig {
-
-	@Bean("dataSource1")
+	
 	@Primary
+	@Bean("dataSource1")
 	@ConfigurationProperties(prefix = "spring.datasource")
 	public DataSource dataSource() {
 		return DataSourceBuilder.create().build();

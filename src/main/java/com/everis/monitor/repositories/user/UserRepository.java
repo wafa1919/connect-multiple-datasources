@@ -1,4 +1,4 @@
-package com.everis.monitor.repositories;
+package com.everis.monitor.repositories.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

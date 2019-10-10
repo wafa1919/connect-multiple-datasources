@@ -1,4 +1,4 @@
-package com.everis.monitor.repositories;
+package com.everis.monitor.repositories.incurrido;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
